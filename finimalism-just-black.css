@@ -5,7 +5,7 @@
 	background: #000 url('https://image.tmdb.org/t/p/original/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	opacity: 0;
+	opacity: 100;
 }
 
 .itemsContainer.padded-left {
