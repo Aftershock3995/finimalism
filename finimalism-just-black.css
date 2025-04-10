@@ -1,5 +1,34 @@
 @import url("https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/finimalism7.css");
 
+/* Backdrop */
+.backgroundContainer {
+	background: #000;
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 0;
+}
+
+.itemsContainer.padded-left {
+	position: top;
+	z-index: 1;
+}
+
+.itemsContainer.padded-left::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	opacity: 1;
+	z-index: -1;
+	backdrop-filter: saturate(0%) !important;
+}
+
+.sectionTitleContainer.sectionTitleContainer-cards.padded-left::before {
+	backdrop-filter: saturate(0%) !important;
+}
 
 .detailPagePrimaryContainer {
 	position: relative;
@@ -13,7 +42,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #000;
+	background: #000;@import url("https://cdn.jsdelivr.net/gh/Aftershock3995/finimalism@main/finimalism-just-black.css");
 	background-size: cover;
 	opacity: 0.8;
 	z-index: -1;
