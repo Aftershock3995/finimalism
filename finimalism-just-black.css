@@ -20,16 +20,20 @@
 
 .itemsContainer.padded-left::before {
     content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url('https://cdn.jsdelivr.net/gh/Aftershock3995/finimalism@main/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg') center/cover no-repeat;
-    opacity: 1;
-    z-index: -1;
-    backdrop-filter: blur(12px) saturate(30%) brightness(0.5) !important;
-    filter: grayscale(20%) contrast(90%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: url(https://cdn.jsdelivr.net/gh/Aftershock3995/finimalism@main/jOzrELAzFxtMx2I4uDGHOotdfsS.png) center top no-repeat #030322;
+	background-attachment: scroll;
+	background-size: auto;
+	background-size: cover;
+	opacity: 1;
+	filter: brightness(30%) blur(10px);
+	z-index: -1;
+	background-attachment: fixed;
+
 }
 
 .sectionTitleContainer.sectionTitleContainer-cards.padded-left::before {
