@@ -14,19 +14,11 @@
 }
 
 .itemsContainer.padded-left::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: 
-        linear-gradient(rgba(30, 30, 30, 0.7), rgba(10, 10, 10, 0.8)),
-        url(https://cdn.jsdelivr.net/gh/Aftershock3995/finimalism@main/jOzrELAzFxtMx2I4uDGHOotdfsS.png) center/cover no-repeat;
-    opacity: 1;
-    z-index: -1;
-    backdrop-filter: blur(12px) saturate(30%) brightness(0.5) !important;
-    filter: grayscale(20%) contrast(90%);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+                url(https://cdn.jsdelivr.net/gh/Aftershock3995/finimalism@main/jOzrELAzFxtMx2I4uDGHOotdfsS.png) center/cover no-repeat !important;
+    backdrop-filter: blur(20px) brightness(0.3) saturate(0%) !important;
+    filter: grayscale(50%) !important;
+    opacity: 1 !important;
 }
 
 .sectionTitleContainer.sectionTitleContainer-cards.padded-left::before {
