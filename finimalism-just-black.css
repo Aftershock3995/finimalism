@@ -1,17 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/finimalism7.css");
 
-.backdropImage {
-  display: none;
-}
-
-/* Backdrop */
-.backgroundContainer {
-  background-color: rgba(0, 0, 0, 0);
-  background-image: url('https://image.tmdb.org/t/p/original/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg');
-  filter: blur(10px);
-  background-size: cover;
-}
-
 .itemsContainer.padded-left {
 	position: top;
 	z-index: 1;
