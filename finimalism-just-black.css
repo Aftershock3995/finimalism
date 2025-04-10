@@ -2,7 +2,7 @@
 
 /* Backdrop */
 .backgroundContainer {
-	background: rgb(3, 90, 221);
+	background: #000;
 	-webkit-background-size: cover;
 	background-size: cover;
 	opacity: 0;
@@ -155,7 +155,7 @@
 }
 
 #loginPage {
-	background: url(https://i.imgur.com/gpe0jJc.jpeg) !important; 
+	background: url(https://image.tmdb.org/t/p/original/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg) !important; 
 	background-size: cover !important;
 }
 
@@ -166,7 +166,7 @@
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: url(https://i.imgur.com/gpe0jJc.jpeg) center top no-repeat #030322;
+	background: url(https://image.tmdb.org/t/p/original/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg) center top no-repeat #030322;
 	background-attachment: scroll;
 	background-size: auto;
 	background-size: cover;
