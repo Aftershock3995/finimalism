@@ -1,0 +1,70 @@
+/* ====== Tighter vertical spacing between sections ====== */
+.sectionTitle {
+  margin: 4px 0 !important;
+  padding: 0 !important;
+}
+
+.padded-top-focusscale,
+.padded-bottom-focusscale {
+  padding: 0 !important;
+}
+
+/* Optional: tighter rows inside the media strip */
+.itemsContainer {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  row-gap: 6px !important;
+}
+
+/* ====== Scroll button styling and placement ====== */
+
+/* Ensure scroll container can position buttons correctly */
+.emby-scroller {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-left: 40px !important;   /* Room for left button */
+  padding-right: 40px !important;  /* Room for right button */
+}
+
+/* Scroll button wrapper must allow positioning */
+.emby-scrollbuttons {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  pointer-events: none !important; /* Allow interactions to pass through */
+}
+
+/* Actual scroll buttons — centered vertically and clickable */
+.emby-scrollbuttons-button {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 5 !important;
+  background-color: rgba(0, 0, 0, 0.7) !important; /* darker background */
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: white !important;
+  pointer-events: auto !important; /* Ensure it's clickable */
+}
+
+/* Left and right positions */
+.emby-scrollbuttons-button[data-direction="left"] {
+  left: 0 !important;
+}
+
+.emby-scrollbuttons-button[data-direction="right"] {
+  right: 0 !important;
+}
+
+/* Optional: dim disabled scroll buttons */
+.emby-scrollbuttons-button[disabled] {
+  opacity: 0.2 !important;
+  pointer-events: none !important;
+}
