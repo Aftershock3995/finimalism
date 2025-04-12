@@ -1,4 +1,54 @@
-/* ====== Tighter vertical spacing between sections ====== */
+/* Numbered sections */
+.section0.verticalSection.emby-scroller-container,
+.section1.verticalSection.emby-scroller-container,
+.section5.verticalSection.emby-scroller-container,
+.section6.verticalSection.emby-scroller-container,
+/* Recently Added Movies */
+.verticalSection.emby-scroller-container:has(a[href*="movies.html"] .sectionTitle-cards),
+/* Recently Added Shows */
+.verticalSection.emby-scroller-container:has(a[href*="tv.html"] .sectionTitle-cards) {
+  padding-left: 16px !important;
+}
+
+/* ====== Keep all your existing button styles ====== */
+.emby-scrollbuttons-button {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 5 !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: rgba(52, 52, 52, 0.8) !important;
+  opacity: 0.5 !important;
+  pointer-events: auto !important;
+  transition: all 0.2s ease !important;
+}
+
+.emby-scrollbuttons-button:hover,
+.emby-scrollbuttons-button:hover i,
+.emby-scrollbuttons-button:hover svg,
+.emby-scrollbuttons-button:hover * {
+  color: #ff0000 !important;
+  fill: #ff0000 !important;
+  stroke: #ff0000 !important;
+  opacity: 1 !important;
+}
+
+/* Button positioning with adjusted margins */
+.emby-scrollbuttons-button[data-direction="left"] {
+  left: 0 !important;
+  margin-left: 15px !important; /* Slightly increased from 10px */
+}
+
+.emby-scrollbuttons-button[data-direction="right"] {
+  right: 0 !important;
+  margin-right: 10px !important;
+}
+
+/* ====== Rest of your original styles ====== */
 .sectionTitle {
   margin: 4px 0 !important;
   padding: 0 !important;
@@ -9,62 +59,32 @@
   padding: 0 !important;
 }
 
-/* Optional: tighter rows inside the media strip */
 .itemsContainer {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   row-gap: 6px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* ====== Scroll button styling and placement ====== */
-
-/* Ensure scroll container can position buttons correctly */
 .emby-scroller {
   position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-left: 40px !important;   /* Room for left button */
-  padding-right: 40px !important;  /* Room for right button */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* Scroll button wrapper must allow positioning */
 .emby-scrollbuttons {
   position: absolute !important;
   top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   bottom: 0 !important;
   width: 100% !important;
   display: block !important;
-  pointer-events: none !important; /* Allow interactions to pass through */
+  pointer-events: none !important;
 }
 
-/* Actual scroll buttons — centered vertically and clickable */
-.emby-scrollbuttons-button {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 5 !important;
-  background-color: rgba(0, 0, 0, 0.7) !important; /* darker background */
-  border-radius: 50% !important;
-  width: 36px !important;
-  height: 36px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  color: white !important;
-  pointer-events: auto !important; /* Ensure it's clickable */
-}
-
-/* Left and right positions */
-.emby-scrollbuttons-button[data-direction="left"] {
-  left: 0 !important;
-}
-
-.emby-scrollbuttons-button[data-direction="right"] {
-  right: 0 !important;
-}
-
-/* Optional: dim disabled scroll buttons */
 .emby-scrollbuttons-button[disabled] {
-  opacity: 0.2 !important;
+  opacity: 0.3 !important;
   pointer-events: none !important;
 }
