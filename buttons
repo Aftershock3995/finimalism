@@ -1,10 +1,10 @@
+
 /* ====== BASE CONTAINER STYLES ====== */
 .emby-scroller-container {
   margin-top: 5px !important;
 }
 
 /* ====== PADDED SECTIONS ====== */
-/* Numbered sections */
 .section0.verticalSection.emby-scroller-container,
 .section1.verticalSection.emby-scroller-container,
 .section5.verticalSection.emby-scroller-container,
@@ -14,16 +14,16 @@
 /* Recently Added Shows */
 .verticalSection.emby-scroller-container:has(a[href*="tv.html"] .sectionTitle-cards) {
   padding-left: 16px !important;
-  padding-right: 16px !important; /* Added for consistency */
+  padding-right: 16px !important;
 }
 
 /* ====== TITLE CONTAINER OVERRIDE ====== */
 .sectionTitleContainer.padded-left {
-  padding-left: 0 !important; /* Force override */
+  padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
-/* ====== Keep all your existing button styles ====== */
+/* ====== SCROLL BUTTON STYLES ====== */
 .emby-scrollbuttons-button {
   position: absolute !important;
   top: 50% !important;
@@ -38,8 +38,10 @@
   opacity: 0.5 !important;
   pointer-events: auto !important;
   transition: all 0.2s ease !important;
+  overflow: visible !important;
 }
 
+/* Hover visuals */
 .emby-scrollbuttons-button:hover,
 .emby-scrollbuttons-button:hover i,
 .emby-scrollbuttons-button:hover svg,
@@ -50,10 +52,10 @@
   opacity: 1 !important;
 }
 
-/* Button positioning with adjusted margins */
+/* Button positioning */
 .emby-scrollbuttons-button[data-direction="left"] {
   left: 0 !important;
-  margin-left: 15px !important; /* Slightly increased from 10px */
+  margin-left: 15px !important;
 }
 
 .emby-scrollbuttons-button[data-direction="right"] {
@@ -61,7 +63,33 @@
   margin-right: 10px !important;
 }
 
-/* ====== Rest of your original styles ====== */
+/* ====== DARKEN HOVER EFFECT RECTANGLE ====== */
+.emby-scrollbuttons-button::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0 16px 16px 0;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.emby-scrollbuttons-button[data-direction="right"]::before {
+  right: 0;
+  left: auto;
+  border-radius: 16px 0 0 16px;
+}
+
+.emby-scrollbuttons-button:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ====== REST OF ORIGINAL STYLES ====== */
 .sectionTitle {
   margin: 4px 0 !important;
   padding: 0 !important;
